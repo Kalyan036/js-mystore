@@ -1,0 +1,34 @@
+.header {
+    display:flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.menu {
+    display:flex;
+}
+.menu div {
+    padding: 10px;
+}
+.row {
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.box {
+    width: 300px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.row button {
+    background-color: green;
+    font-size: 20px;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+}
