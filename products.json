@@ -1,44 +1,44 @@
 [
     {
         "id": 1,
-        "name": "Product 1",
-        "desc" : "This is description of the product",
-        "price": 34,
-        "url":"https://picsum.photos/id/1/300/300"
+        "name": "Sandwich with boiled egg",
+        "desc" : "A delicious sandwich made with boiled eggs, perfect for a quick meal.",
+        "price": 14,
+        "url":"https://images.unsplash.com/photo-1482049016688-2d3e1b311543?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
         "id": 2,
-        "name": "Product 2",
-        "desc" : "This is description of the product",
-        "price": 40,
-        "url":"https://picsum.photos/id/2/300/300"
+        "name": "Vegetable salads",
+        "desc" : "A fresh and healthy mix of assorted vegetables, perfect for a light meal.",
+        "price": 20,
+        "url":"https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
         "id": 3,
-        "name": "Product 3",
-        "desc" : "This is description of the product",
-        "price": 50,
-        "url":"https://picsum.photos/id/3/300/300"
+        "name": "Toast bread with blueberry",
+        "desc" : "Crispy toast bread topped with fresh blueberries, a sweet and satisfying snack.",
+        "price": 19,
+        "url":"https://images.unsplash.com/photo-1484723091739-30a097e8f929?q=80&w=1547&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
         "id": 4,
-        "name": "Product 4",
-        "desc" : "This is description of the product",
+        "name": "hamburger",
+        "desc" : "A classic hamburger with fresh ingredients, perfect for any meal.",
         "price": 20,
-        "url":"https://picsum.photos/id/4/300/300"
+        "url":"https://plus.unsplash.com/premium_photo-1675252369719-dd52bc69c3df?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
         "id": 5,
-        "name": "Product 5",
-        "desc" : "This is description of the product",
-        "price": 30,
-        "url":"https://picsum.photos/id/5/300/300"
+        "name": "Strawberry ice cream",
+        "desc" : "Creamy strawberry ice cream, a sweet and refreshing treat.",
+        "price": 5,
+        "url":"https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
         "id": 6,
-        "name": "Product 6",
-        "desc" : "This is description of the product",
+        "name": "Grilled meat",
+        "desc" : "Juicy grilled meat, seasoned to perfection and cooked over an open flame.",
         "price": 40,
-        "url":"https://picsum.photos/id/6/300/300"
+        "url":"https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
 ]
