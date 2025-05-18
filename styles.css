@@ -1,34 +1,109 @@
-.header {
-    display:flex;
-    justify-content: space-between;
-    padding: 10px;
-}
-.menu {
-    display:flex;
-}
-.menu div {
-    padding: 10px;
-}
-.row {
-    display:flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.box {
-    width: 300px;
-    border: 1px solid gray;
-    border-radius: 20px;
-    padding: 20px;
-    margin: 20px;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
 }
 
-.row button {
-    background-color: green;
-    font-size: 20px;
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background-color: #222;
+    color: white;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    gap: 15px;
+}
+
+.menu div {
+    padding: 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.menu div:hover {
+    color: #00ff99;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 280px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+    height: 100%;
+    min-height: 430px; /* Optional: makes all cards roughly same height */
+    box-sizing: border-box;
+}
+
+.box:hover {
+    transform: scale(1.03);
+}
+
+.box img {
+     width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.box button {
+    background-color: #28a745;
+    font-size: 16px;
     color: white;
     width: 100%;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 8px;
     border: none;
     font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.box button:hover {
+    background-color: #218838;
+}
+
+.cart-item {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 12px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.cart-item button {
+    margin: 5px 8px 5px 0;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.cart-item .delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.cart-item .delete-btn:hover {
+    background-color: #c82333;
 }

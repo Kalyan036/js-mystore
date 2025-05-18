@@ -1,22 +1,35 @@
-let products = []
-
+let products = [];
 
 fetch("products.json")
-  .then((response) => response.json()) 
-  .then((data) => (showProducts(data))) 
-  
+  .then((response) => response.json())
+  .then((data) => showProducts(data));
 
 const cart = {};
+
 const addToCart = (id) => {
-  if (!cart[id]) cart[id] = 1;
+  if (!cart[id]) {
+    cart[id] = 1;
+  } else {
+    cart[id] += 1;
+  }
   showCart();
 };
+
 const increment = (id) => {
-  cart[id] = cart[id] + 1;
+  cart[id]++;
   showCart();
 };
+
 const decrement = (id) => {
-  cart[id] = cart[id] - 1;
+  cart[id]--;
+  if (cart[id] <= 0) {
+    delete cart[id];
+  }
+  showCart();
+};
+
+const deleteCart = (id) => {
+  delete cart[id];
   showCart();
 };
 
@@ -30,52 +43,51 @@ const hideCart = () => {
   productBox.style.display = "block";
 };
 
-const deleteCart = (id) => {
-  delete cart[id];
-  showCart();
-};
-
 const showTotal = () => {
   let total = products.reduce((sum, value) => {
     return sum + value.price * (cart[value.id] ?? 0);
   }, 0);
-  order.innerHTML = total;
+  order.innerHTML = `$${total.toFixed(2)}`;
 };
 
 const showCart = () => {
-  let count = Object.keys(cart).length;
-  items.innerHTML = count;
+  items.innerHTML = Object.keys(cart).length;
   showTotal();
+
   let str = "";
-  products.map((value) => {
+  products.forEach((value) => {
     if (cart[value.id]) {
-      str += `<div>
-      ${value.id}-${value.name}-${value.price}-
-      <button onclick='decrement(${value.id})'>-</button>
-      ${cart[value.id]}
-      <button onclick='increment(${value.id})'>+</button>
-      -${value.price * cart[value.id]}
-      -<button onclick='deleteCart(${value.id})'>Delete</button>
-      </div>`;
+      str += `
+        <div class="cart-item">
+          <strong>${value.name}</strong> - $${value.price} x ${cart[value.id]}
+          = <strong>$${(value.price * cart[value.id]).toFixed(2)}</strong><br>
+          <button onclick="decrement(${value.id})">-</button>
+          <button onclick="increment(${value.id})">+</button>
+          <button class="delete-btn" onclick="deleteCart(${value.id})">Delete</button>
+        </div>
+      `;
     }
   });
-  divCart.innerHTML = str;
+
+  divCart.innerHTML = str || "<p>Your cart is empty.</p>";
 };
+
 const showProducts = (data) => {
-  products = data
-  let str = "<div class='row'>";
-  products.map((value) => {
+  products = data;
+
+  let str = 
+  "<div class='row'>";
+  products.forEach((value) => {
     str += `
-    <div class='box'>
-    <img src='${value.url}'>
-    <h3>${value.name}</h3>
-    <p>${value.desc}</p>
-    <h4>$${value.price}</h4>
-    <button onclick='addToCart(${value.id})'>Add to Cart</button>
-    </div>
+      <div class='box'>
+        <img src='${value.url}' alt='${value.name}' style='width:100%; border-radius: 10px;'>
+        <h3>${value.name}</h3>
+        <p>${value.desc}</p>
+        <h4>$${value.price}</h4>
+        <button onclick='addToCart(${value.id})'>Add to Cart</button>
+      </div>
     `;
   });
   divProducts.innerHTML = str + "</div>";
+
 };
-
-
